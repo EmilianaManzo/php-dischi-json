@@ -18,21 +18,35 @@ include_once __DIR__ . '/partials/head.php';
 
     <main>
       <div class="container">
-        <div class="row row-cols-3 ">
+
+        <div class="row row-cols-3">
 
           <div class="col p-3"
-          v-for ="(item, i) in dischiArr" >
-            <div class="card py-5 px-2">
-              <h3>{{item.title}}</h3>
-              <div class="img">
-                <img :src="item.poster" alt="">
+          v-for ="(item, i) in dischiArr">
+
+            <div class="em_card">
+
+              <div class="card-inner">
+
+                <div class="card-front">
+                  <img :src="item.poster" alt="">
+                </div>
+
+                <div class="card-back">
+                  <div class="borders h-100 p-3 ">
+                    <p><strong>Titolo:</strong> {{item.title}}</p>
+
+                    <p><strong>Anno:</strong> {{item.year}} </p>
+
+                    <p><strong>Autore:</strong> {{item.author}}</p>
+                    <p><strong>Genere:</strong> {{item.genre}}</p>
+                  </div>
+                  
+                </div>
+
               </div>
-              <span>{{item.year}}</span>
-              <p>{{item.author}}</p>
-              <p>{{item.genre}}</p>
             </div>
           </div>
-
         </div>
       </div>
     </main>
