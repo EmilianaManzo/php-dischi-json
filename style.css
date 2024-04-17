@@ -1,0 +1,19 @@
+body{
+  background-color: #202d3c;
+}
+
+img{
+  width: 100%;
+}
+
+header{
+  background-color: #08131f;
+  height: 80px;
+  color: greenyellow;
+  text-transform: uppercase;
+}
+
+header .col h1{
+  line-height: 80px;
+  font-size: 3rem;
+}
