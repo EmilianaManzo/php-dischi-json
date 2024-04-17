@@ -66,7 +66,7 @@ font-weight: bold;
   border: 3px solid #49d05c;
   opacity: 0;
   transition: 0.7s ease-in-out;
-  animation: mymove 0.4s ease-out ; 
+  animation: mymove 0.4s ease-out ;  
 }
 .borders p{
   font-size: 1.5rem;
@@ -80,20 +80,20 @@ font-weight: bold;
 
     
     
-.card-inner:hover .card-back{
+.card-back.active{
   opacity: 1;
   padding: 8px;
 }
 
-.card-back:hover .borders{
+.borders.active{
   opacity: 1;
   border-radius: 10px;
 }
-.card-back:hover .borders p{
+.borders p.active{
   opacity: 1;
 }
 
-.card-inner:hover .card-front{
+.card-front.active{
   filter: grayscale(1) brightness(0.4);
 }     
 

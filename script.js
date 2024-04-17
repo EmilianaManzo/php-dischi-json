@@ -7,6 +7,8 @@ createApp({
       title: 'Boolify',
       apiUrl: 'server.php',
       dischiArr: [],
+
+      activeDisc: '',
     }
   },
 
@@ -20,7 +22,8 @@ createApp({
         .catch(error => {
           console.log(error);
         })
-    }
+    },
+
   },
 
   mounted(){
