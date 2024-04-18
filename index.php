@@ -90,7 +90,7 @@ include_once __DIR__ . '/partials/head.php';
                       <p :class="activeDisc === i ? 'active' : '' "><strong>Autore:</strong> {{item.author}}</p>
                       <p :class="activeDisc === i ? 'active' : '' "><strong>Genere:</strong> {{item.genre}}</p>
                       <p :class="activeDisc === i ? 'active' : '' ">
-                        <strong><a href="disc_details.php">More Info +</a></strong>
+                        <strong><a :href="`disc_details.php?i=${i}`">More Info +</a></strong>
                       </p>
                     </div>
                     
