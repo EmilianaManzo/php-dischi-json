@@ -39,7 +39,16 @@ main{
   margin-top: 80px;
 }
 
+/* ICONE  */
+i{
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
 
+.wishlist{
+  color: red;
+}
 
 /* CARD  */
 .em_card {
@@ -47,6 +56,9 @@ main{
   aspect-ratio: 1;
   cursor: pointer;
 }
+
+
+
 
 .card-inner {
     position: relative;
@@ -138,4 +150,6 @@ font-weight: bold;
   }
 
 }
+
+
 

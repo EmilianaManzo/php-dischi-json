@@ -6,7 +6,7 @@ $json_string = file_get_contents('dischi.json');
 // ricodifico la stringa trasformandola in un elemento php 
 $dischi = json_decode($json_string, true);
 
-
+// logica dell'aggiungi 
 if(isset($_POST['newTaskTitle'])){
   $new_item =[
     'title' => $_POST['newTaskTitle'],
@@ -22,7 +22,21 @@ if(isset($_POST['newTaskTitle'])){
 }
 
 
+// logica del cancella 
+if (isset($_POST['discToDelete'])){
+  $discToDelete = $_POST['discToDelete'];
+//  in array_splice i parametri sono : dove, cosa, quanti 
+  array_splice($dischi, $discToDelete , 1 );
+  file_put_contents('dischi.json' , json_encode($dischi));
+}
 
+
+// logica del toggle classe 
+if (isset($_POST['favDisc'])){
+  $favDisc = $_POST['favDisc'];
+  $dischi[$favDisc]['wishlist'] = !$dischi[$favDisc]['wishlist'];
+  file_put_contents('dischi.json' , json_encode($dischi));
+}
 
 
 

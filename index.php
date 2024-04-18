@@ -71,7 +71,7 @@ include_once __DIR__ . '/partials/head.php';
           <div class="row row-cols-3">
 
             <div class="col p-3"
-            v-for ="(item, i) in dischiArr" :key="i">
+              v-for ="(item, i) in dischiArr" :key="i">
 
               <div class="em_card" @click="activeDisc = i">
 
@@ -96,9 +96,32 @@ include_once __DIR__ . '/partials/head.php';
                     
                   </div>
 
+
                 </div>
+
               </div>
+
+              <div class=" d-flex justify-content-end px-2 " id="icons">
+                <div class="favorite me-3 text-white-50 ">
+                  <i
+                    :class="{'wishlist' : item.wishlist}"
+                    @click.stop="favoriteDisc(i)"
+                    class="fa-solid fa-heart"
+                    ></i>
+                </div>
+
+                <div class="delete text-black ">
+                <i
+                  @click.stop="removeDisc(i)"
+                  class="fa-solid fa-trash"
+                  ></i>
+                </div>
+
+                
+              </div>
+
             </div>
+
           </div>
         </div>
       </main>

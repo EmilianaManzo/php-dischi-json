@@ -14,8 +14,10 @@ createApp({
         author: '',
         year: '',
         poster: "https://www.musicamusicastore.com/image/cache/catalog/vinile33-300x300.png",
-        genre: ''
-      }
+        genre: '',
+        wishlist: false
+      },
+      isFavorite : false
     }
   },
 
@@ -53,6 +55,38 @@ createApp({
         .catch(error => {
           console.log(error);
         })
+    },
+
+
+    removeDisc(i){
+      const discToDelete = this.dischiArr[i];
+
+      if(confirm(`Sicuro di voler eliminare il disco ${discToDelete.title} ?`)){
+        const data = new FormData();
+        data.append('discToDelete', i);
+
+        axios.post(this.apiUrl, data)
+        .then(result =>{
+          this.dischiArr = result.data;
+        })
+        .catch(error => {
+          console.log(error);
+        })
+
+      }
+    },
+
+    favoriteDisc(i){
+      const data = new FormData();
+      data.append('favDisc', i );
+
+      axios.post(this.apiUrl, data)
+      .then(result =>{
+        this.dischiArr = result.data;
+      })
+      .catch(error => {
+        console.log(error);
+      })
     }
 
   },
