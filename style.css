@@ -6,6 +6,18 @@ img{
   width: 100%;
 }
 
+a{
+  text-decoration: none;
+  color: #49d05c ;
+}
+
+label{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+/* HEADER  */
 header{
   background-color: #08131f;
   height: 80px;
@@ -86,6 +98,7 @@ font-weight: bold;
 .borders strong{
   color: #49d05c ;
 }
+
 
     
     
