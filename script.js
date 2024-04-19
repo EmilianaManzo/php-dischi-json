@@ -27,6 +27,8 @@ createApp({
         .then(result =>{
           this.dischiArr = result.data;
           console.log(this.dischiArr);
+          console.log('chiamata axios al caricamentooo');
+
         })
         .catch(error => {
           console.log(error);
@@ -47,6 +49,7 @@ createApp({
         .then(result =>{
           this.dischiArr = result.data;
           console.log(this.dischiArr);
+          console.log('chiamata add disc ------');
           this.newTask.title = '';
           this.newTask.author = '';
           this.newTask.year = '';
@@ -68,6 +71,7 @@ createApp({
         axios.post(this.apiUrl, data)
         .then(result =>{
           this.dischiArr = result.data;
+          console.log('chiamata revode disc ------');
         })
         .catch(error => {
           console.log(error);
@@ -83,6 +87,7 @@ createApp({
       axios.post(this.apiUrl, data)
       .then(result =>{
         this.dischiArr = result.data;
+        console.log('chiamata favorite disc---');
       })
       .catch(error => {
         console.log(error);

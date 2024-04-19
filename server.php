@@ -6,6 +6,8 @@ $json_string = file_get_contents('dischi.json');
 // ricodifico la stringa trasformandola in un elemento php 
 $dischi = json_decode($json_string, true);
 
+
+
 // logica dell'aggiungi 
 if(isset($_POST['newTaskTitle'])){
   $new_item =[

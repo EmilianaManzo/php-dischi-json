@@ -21,15 +21,25 @@ $disco = $dischi[$_GET['i']];
           <h5 class="mb-3"><?php echo $disco['genre'] ?></h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium, quam id accusantium cupiditate dolores. Consectetur fuga totam quae cum eligendi. Aliquam tempora magni iure vel impedit ipsam corporis mollitia!</p>
 
+          <h4>TRACCE :</h4>
+          <ol>
+            <li v-for="item in 10">Track</li>
+          </ol>
 
-          <a href="index.php" class="btn btn-success mt-5 ">
+
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-center ">
+        <a href="index.php" class="btn btn-success mt-5 ">
             Torna alla pagina precedente
           </a>
-
         </div>
       </div>
     </div>
 
-
+    <script src="script.js"></script>
   </body>
 </html>
